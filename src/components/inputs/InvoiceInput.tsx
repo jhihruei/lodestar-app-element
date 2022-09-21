@@ -184,15 +184,15 @@ const InvoiceInput: React.VFC<{
       email: emailRef.current?.input.value || '',
       phoneBarCode:
         currentInvoiceOption === 'use-phone-bar-code'
-          ? phoneBarCodeRef.current?.input.value.toLocaleUpperCase() || ''
+          ? phoneBarCodeRef.current?.input.value.toLocaleUpperCase().trim() || ''
           : undefined,
       citizenCode:
         currentInvoiceOption === 'citizen-digital-certificate'
-          ? citizenCodeRef.current?.input.value.toLocaleUpperCase() || ''
+          ? citizenCodeRef.current?.input.value.toLocaleUpperCase().trim() || ''
           : undefined,
       uniformNumber:
         currentInvoiceType === 'uniform-number' || currentInvoiceType === 'hardcopy-uniform-number'
-          ? uniformNumberRef.current?.input.value || ''
+          ? uniformNumberRef.current?.input.value.trim() || ''
           : undefined,
       uniformTitle:
         currentInvoiceType === 'uniform-number' || currentInvoiceType === 'hardcopy-uniform-number'
